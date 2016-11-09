@@ -1,3 +1,23 @@
+<!DOCTYPE html>
 <html>
-  <p>Hello Pokemon</p>
+    <head>
+        <title>loadMapAsyncHTML</title>
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+    </head>
+    <body>
+        <div id='printoutPanel'></div>
+        
+        <div id='myMap' style='width: 100vw; height: 100vh;'></div>
+        <script type='text/javascript'>
+                var map;
+                function loadMapScenario() {
+                    map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
+                        credentials: 'Av2mgOB8vTomOG1V1MKWxkeS5gH-lagrb0dmSLh01f6BwU6SQfUy5W5O63eeBQwo'
+                    });
+                }
+                
+            
+        </script>
+        <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?branch=release&callback=loadMapScenario' async defer></script>
+    </body>
 </html>
