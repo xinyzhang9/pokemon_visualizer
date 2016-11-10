@@ -46,7 +46,7 @@ function add_pokemon_layer(){
 
 function get_counter_down_time_from_expire_epoch(epoch){
 	var now_time = new Date().getTime() / 1000;
-	var time_left = epoch - now_time;
+	var time_left = epoch / 1000 - now_time;
 	var second = Math.floor(time_left % 60);
 	var minute = Math.floor(time_left / 60);
 	return minute +':'+second;
