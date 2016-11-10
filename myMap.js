@@ -80,9 +80,7 @@ function refresh_pokemon_data(){
 	    west: bounds.getWest(),
 	    east: bounds.getEast(),
 	};
-	var body = {
-	    //This is where you define the body of the request
-	};
+	var body = {};
 	var additionalParams = {};
 
 	apigClient.mapPokemonsGet(params, body, additionalParams)
