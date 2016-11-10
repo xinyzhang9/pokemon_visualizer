@@ -4,7 +4,7 @@ var map_manager = {
 }
 
 //1. define pokemon data format, create mock pokemon data
-mao_manager.map_items = [
+map_manager.map_items = [
 	{
 		"pokemon_id": 12,
 		"expire": 1478739751,
@@ -42,7 +42,7 @@ function get_pokemon_layer_from_map_items(map_items){
 
 function add_pokemon_layer(){
 	var pokemon_layer = get_pokemon_layer_from_map_items(map_manager.map_items);
-	map.layers.insert(pokemon_layer);
+	map_manager.map.layers.insert(pokemon_layer);
 }
 
 function get_counter_down_time_from_expire_epoch(epoch){
@@ -61,10 +61,10 @@ function refresh_pokemon_layer(){
 	var pokemon_layer = get_pokemon_layer_from_map_items(map_manager.map_items);
 
 	//remove old layer
-	map.layers.clear();
+	map_manager.map.layers.clear();
 
 	//add new layer
-	map.layers.insert(pokemon_layer);
+	map_manager.map.layers.insert(pokemon_layer);
 }
 
 //4. connect with REST API
@@ -97,6 +97,6 @@ function refresh_pokemon_data(){
 	}
 
 
-
+window.setInterval(refresh_pokemon_data,1000);
 
 window.setInterval(refresh_pokemon_layer,1000);
