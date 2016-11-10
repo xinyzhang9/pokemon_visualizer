@@ -1,3 +1,18 @@
+var map_manager = {
+	"map": null,
+	"map_items": []
+}
+
+//1. define pokemon data format, create mock pokemon data
+mao_manager.map_items = [
+	{
+		"pokemon_id": 12,
+		"expire": 1478739751,
+		"longitude": -121.9872018,
+		"latitude": 37.391752
+	}
+]
+
 var map;
 function loadMapScenario() {
     map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
@@ -6,15 +21,7 @@ function loadMapScenario() {
     add_pokemon_layer();
 }
 
-//1. define pokemon data format, create mock pokemon data
-var map_items = [
-	{
-		"pokemon_id": 12,
-		"expire": 1478739751,
-		"longitude": -121.9872018,
-		"latitude": 37.391752
-	}
-]
+
 
 //2. create pokemon image on map
 function get_pokemon_layer_from_map_items(map_items){
@@ -59,5 +66,8 @@ function refresh_pokemon_layer(){
 	//add new layer
 	map.layers.insert(pokemon_layer);
 }
-window.setInterval(refresh_pokemon_layer,1000);
+
 //4. connect with REST API
+
+
+window.setInterval(refresh_pokemon_layer,1000);
