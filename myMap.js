@@ -1,15 +1,15 @@
 var map_manager = {
-	"map": null,
-	"map_items": []
+    "map" : null,
+    "map_items" : []
 }
 
 map_manager.map_items = [
-	{
-		"pokemon_id": 12,
-		"expire": 1478739751,
-		"longitude": -121.9872018,
-		"latitude": 37.391752
-	}
+    {
+      "pokemon_id" : 12,
+      "expire" : 1476589403,
+      "longitude" : -73.9800345,
+      "latitude" : 40.7596651,
+    }
 ]
 
 function loadMapScenario() {
@@ -18,8 +18,6 @@ function loadMapScenario() {
     });
     add_pokemon_layer();
 }
-
-
 
 // 1. Define pokemon data format, create mock pokemon data
 function get_counter_down_time_from_expire_epoch(epoch) {
@@ -79,10 +77,9 @@ function refresh_pokemon_data() {
     .then(function(result){
         //This is where you would put a success callback
         map_manager.map_items = result.data;
-        console.log(result);
     }).catch( function(result){
         //This is where you would put an error callback
-        console.log(result);
+        console.log(result)
     });   
 }
 window.setInterval(refresh_pokemon_data, 1000);
