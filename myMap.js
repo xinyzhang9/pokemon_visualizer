@@ -43,10 +43,21 @@ function get_counter_down_time_from_expire_epoch(epoch){
 	var time_left = epoch - now_time;
 	var second = Math.floor(time_left % 60);
 	var minute = Math.floor(time_left / 60);
-	return minute +' : '+second;
+	return minute +':'+second;
 }
 
 
 //3. add pokemon counter down refresh
 
+function refresh_pokemon_layer(){
+	//prepare new layer
+	var pokemon_layer = get_pokemon_layer_from_map_items(map_items);
+
+	//remove old layer
+	map.layers.clear();
+
+	//add new layer
+	map.layers.insert(pokemon_layer);
+}
+window.setInterval(refresh_pokemon_layer,1000);
 //4. connect with REST API
