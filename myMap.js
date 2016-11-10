@@ -1,5 +1,4 @@
 //'Av2mgOB8vTomOG1V1MKWxkeS5gH-lagrb0dmSLh01f6BwU6SQfUy5W5O63eeBQwo'
-    });
 var map_manager = {
     "map" : null,
     "map_items" : []
