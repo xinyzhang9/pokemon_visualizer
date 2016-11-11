@@ -14,10 +14,11 @@ Data Storage: PostgreSQL, AWS RDS, AWS Elasticcache
 Deployment Tool: Docker  
 Version Control: Git  
 
-# live
+# Live
 https://xinyzhang9.github.io/pokemon_visualizer/
 
 # Screenshot
+![alt tag](https://raw.githubusercontent.com/xinyzhang9/pokemon_visualizer/master/screen.png)
 
 
 
