@@ -1,8 +1,8 @@
 # Pokemon Visualizer
-- [x] Developed, tested and depoloyed as a real-time map with location of different Pokemon
+- [x] Developed, tested and deployed as a real-time map with location of different Pokemon
 - [x] Designed and implemented data storage using PostgreSQL cluster on AWS RDS
 - [x] Built Scalable web crawler server using Django
-- [x] Leveraged REST API and distributed mesage queue to communicate between servers
+- [x] Leveraged REST API and distributed message queue to communicate between servers
 - [x] Packaged and deployed Django server using Docker
 
 # Technology used
